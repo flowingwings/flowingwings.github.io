@@ -14,3 +14,7 @@ Failed to connect to github.com port 443: Operation timed out
 
 1. VSCode左下角设置，搜索Proxy。
 2. 设置
+
+……过了一会发现又没法推送了，说明之前的设置失败。学点计网再来解决吧。
+
+厌恶某个伟大的墙。
