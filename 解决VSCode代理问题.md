@@ -21,7 +21,7 @@ Failed to connect to github.com port 443: Operation timed out
 
 感谢某个伟大的墙催我学知识。
 
-现在好了。设置VSCode的代理并没有起作用，似乎是因为VSCode在做版本控制时只是单纯通过命令行执行git的命令，真正的工作还是git来做的。于是尝试设置git的代理：
+现在好了。设置VSCode的代理并没有起作用，似乎是因为VSCode在做版本控制时只是单纯通过命令行调用git的命令，真正的工作还是git来做的。于是尝试设置git的代理：
 
 1. 打开Powershell。
 2. 执行两个命令
@@ -32,10 +32,24 @@ git config --global https.proxy https://127.0.0.1:10808
 # 这里代理地址的设置与上面对VSCode代理的设置同理。
 ```
 
-再次Sync changes，终于成功。
+再次Sync Changes，终于成功。
 
 好像也没有想的那么难，不太需要把计网从头到尾学一遍。但书已经翻开了，干脆多看一点吧，反正找工作也要用，而且我对这些知识也很好奇。
 
 但之前为什么成功了一小会呢……
 
 ……坏了，刚成功一次又失败了。难道我刚才眼花了？
+
+又试了两次Sync Changes，错误信息居然还不一样？分别是
+
+```text
+Failed to connect to github.com port 443: Timed out
+```
+
+和
+
+```text
+OpenSSL SSL_read: Connection was reset, errno 10054
+```
+
+……看来要学的东西还蛮多的。
